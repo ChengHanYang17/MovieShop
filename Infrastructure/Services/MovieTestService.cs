@@ -6,12 +6,12 @@ namespace Infrastructure.Services;
 
 public class MovieTestService : IMovieService
 {
-    public List<MovieCardModel> GetTop30GrossingMovies()
+    public async Task<List<MovieCardModel>> GetTop30GrossingMovies()
     {
         throw new NotImplementedException();
     }
 
-    public MovieDetailsModel GetMovieDetails(int movieId)
+    public async Task<MovieDetailsModel> GetMovieDetails(int movieId)
     {
         throw new NotImplementedException();
     }

@@ -13,6 +13,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IMovieService, MovieService>(); //important!! if get exception because forget this
 builder.Services.AddScoped<IMovieRepository, MovieRepository>(); //important!! if get exception because forget this
+builder.Services.AddScoped<IGenreRepository, GenreRepository>();
+builder.Services.AddScoped<IGenreService, GenreService>();
 
 // inject connection string from appsettings.json into MovieShopDbContext class
 builder.Services.AddDbContext<MovieShopDbContext>(options => options.UseSqlServer

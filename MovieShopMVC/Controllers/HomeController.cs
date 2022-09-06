@@ -23,17 +23,18 @@ public class HomeController : Controller
 
     // Action methods
     [HttpGet]
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
         // go to database and get the data
         // we want to make tightly coupled code to be loosely coupled code 
         
-        var movies = _movieService.GetTop30GrossingMovies();
+        var movies = await _movieService.GetTop30GrossingMovies();
         
         // 3 ways we can send data from controller/ action method to views: ViewBag, ViewData, Strongly typed Models
         return View(movies);
     }
 
+    [HttpGet]
     public IActionResult Privacy()
     {
         return View();
