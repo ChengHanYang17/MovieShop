@@ -32,4 +32,10 @@ public class MoviesController : Controller
          var movieDetails = await _movieService.GetMovieDetails(id);
          return View(movieDetails);
      }
+
+     public async Task<ActionResult> GenreMovies(int id, int pageSize = 30, int page = 1)
+     {
+         var pagedMovies = await _movieService.GetMoviesByPagination(id, pageSize, page);
+         return View(pagedMovies);
+     }
 }

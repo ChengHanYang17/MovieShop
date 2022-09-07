@@ -15,4 +15,9 @@ public class MovieTestService : IMovieService
     {
         throw new NotImplementedException();
     }
+
+    public Task<PagedResultSet<MovieCardModel>> GetMoviesByPagination(int genreId, int pageSize = 30, int page = 1)
+    {
+        throw new NotImplementedException();
+    }
 }
