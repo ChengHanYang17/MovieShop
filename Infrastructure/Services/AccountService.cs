@@ -14,6 +14,8 @@ public class AccountService : IAccountService
     {
         _userRepository = userRepository;
     }
+    
+
     public async Task<int> RegisterUser(UserRegisterModel model)
     {
         // check if email exists in the database
